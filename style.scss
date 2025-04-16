@@ -9,9 +9,9 @@ $fade-distance: 50px;
 
 // Layout
 .container {
-    max-width: 100vh;
-    margin: 0 auto;
-    padding: 0 1rem;
+    max-width: 100%;
+    height: 100vh;
+    background-color: $hero-bg;
   }
   
   // Navbar
