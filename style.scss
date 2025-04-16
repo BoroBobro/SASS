@@ -1,0 +1,153 @@
+$primary: #0e6cff;
+$secondary: #ff8700;
+$tertiary:#4caf50;
+$hero-bg: #640fc5;
+$fade-duration: 0.6s;
+$fade-distance: 50px;
+
+// Latyout
+
+// Layout
+.container {
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  // Navbar
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+    .logo {
+
+      width: 50px;
+      
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+  
+      a {
+    
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+// Hero
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: $hero-bg;
+    animation: fadeInDown $fade-duration ease-out;
+  
+    .hero-text {
+      flex: 1;
+      animation: fadeInDown $fade-duration ease-out;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+  
+      .buttons {
+        display: flex;
+        gap: 1rem;
+  
+        button {
+          padding: 0.75rem 1.5rem;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: transform 0.2s ease, background-color 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.05);
+          }
+  
+          &.scopri {
+            background-color: $primary;
+            color: white;
+          }
+  
+          &.accedi {
+            background-color: $secondary;
+            color: white;
+          }
+  
+          &.contattaci {
+            background-color: $tertiary;
+            color: white;
+          }
+        }
+      }
+    }
+  
+    .hero-image {
+      flex: 1;
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+      }
+    }
+  }
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    gap: 2rem;
+    background-color: #fff;
+    padding: 4rem 3rem;
+    text-align: center;
+
+    .grid-item{
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 9px;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        margin: 1rem;
+    }
+    
+
+}
+
+// Animazioni 
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-$fade-distance);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
